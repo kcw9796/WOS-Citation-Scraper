@@ -57,6 +57,5 @@ def main():
 	analyze(EXCEL_INPUT_FILENAME)
 
 
-
 if __name__ == "__main__":
    main()
