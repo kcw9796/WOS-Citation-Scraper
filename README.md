@@ -1,6 +1,6 @@
 # WOS Citation Scraper
 
-Uses Web of Science to scrape information about all the people who have cited your article and analyzes the data
+Uses Web of Science to scrape information about all the people who have cited your article and analyzes the data using python
 
 ## Usage
 
