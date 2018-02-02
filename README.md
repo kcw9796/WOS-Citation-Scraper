@@ -4,7 +4,7 @@ Uses Web of Science to scrape information about all the people who have cited yo
 
 ## Usage
 
-###To scrape the data go to scripts directory and type:
+### To scrape the data go to scripts directory and type:
 
 ```
 python scrape.py
@@ -13,7 +13,7 @@ python scrape.py
 You will be prompted to provide a link to the article and it will output the results in a csv in output files
 
 
-###To analyze the data go to the scripts directory and type:
+### To analyze the data go to the scripts directory and type:
 
 ```
 python analyze.py
