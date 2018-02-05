@@ -19,5 +19,4 @@ You will be prompted to provide a link to the article and it will output the res
 python analyze.py
 ```
 
-This will analyze the results and output the results in a csv in output files
-
+This will analyze the results and output the results in an excel file in output files

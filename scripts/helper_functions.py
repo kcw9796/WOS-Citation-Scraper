@@ -1,6 +1,7 @@
 import csv
 import json
 from citation import citation
+import xlsxwriter
 
 def write_obj_to_csv(citation_obj,filename):
 	myFile = open(filename, 'a')
@@ -33,3 +34,12 @@ def write_json(data, jsonfilename):
             f.write(json.dumps(data, sort_keys=False, indent=4, separators=(',', ': '),encoding="utf-8",ensure_ascii=False))
         else:
             f.write(json.dumps(data))
+
+
+def init_excel_file(filename):
+	return xlsxwriter.Workbook(filename)
+
+def write_excel_page(data,workbook,sheetname):
+	worksheet = workbook.add_worksheet(sheetname)
+	for index,data_row in enumerate(data):
+		worksheet.write_row(index,0,data_row)
