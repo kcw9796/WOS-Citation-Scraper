@@ -19,6 +19,19 @@ def make_csv_header_citations(filename):
 	x = 'title,authors,journal,volume,issue,date,email,address,research areas,authors keywords,keywords plus,Funding Agency/Grant Number'
 	write_str_to_csv(x,filename)
 
+
+def init_excel_file(filename):
+	return xlsxwriter.Workbook(filename)
+
+def write_excel_page(data,workbook,sheetname):
+	worksheet = workbook.add_worksheet(sheetname)
+	for index,data_row in enumerate(data):
+		worksheet.write_row(index,0,data_row)
+
+
+
+
+# Other possible helper functions
 def csv_to_json(csvfilename,jsonfilename):
 	csv_rows = []
 	with open(csvfilename) as csvfile:
@@ -34,12 +47,3 @@ def write_json(data, jsonfilename):
             f.write(json.dumps(data, sort_keys=False, indent=4, separators=(',', ': '),encoding="utf-8",ensure_ascii=False))
         else:
             f.write(json.dumps(data))
-
-
-def init_excel_file(filename):
-	return xlsxwriter.Workbook(filename)
-
-def write_excel_page(data,workbook,sheetname):
-	worksheet = workbook.add_worksheet(sheetname)
-	for index,data_row in enumerate(data):
-		worksheet.write_row(index,0,data_row)
